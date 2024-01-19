@@ -6,6 +6,9 @@
 
 let config = {
     type: Phaser.AUTO,
+    render: {
+        pixelArt: true  // makes pixel art scale nicely and not be blurry 
+    },
     scene: [ MainMenu, Play ]
 }
 

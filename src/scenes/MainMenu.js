@@ -11,6 +11,15 @@ class MainMenu extends Phaser.Scene {
         console.log(`HP: ${this.HP}, EXP: ${this.EXP}`)
     }
 
+    preload() {
+        // assets that are preloaded are accessable by all the scenes
+        // all scenes share the same asset cache
+        console.log('MainMenu: preload')
+        // if path is wrong, it will be a green box with a slash through it
+        this.load.path = './assets/img/'    // helps you not type the path name 500 times
+        this.load.image('tomato', 'tomato.png') // we can also put the full path here
+    }
+
     create() {
         console.log('MainMenu: create')
 
